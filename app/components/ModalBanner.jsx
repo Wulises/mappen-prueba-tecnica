@@ -15,7 +15,7 @@ export default function ModalBanner() {
     <div className="fixed inset-0 flex justify-center items-center z-50">
 
       {/* Modal */}
-      <div className="relative max-w-[90%] sm:max-w-[600px] rounded-xl overflow-hidden shadow-lg">
+      <div className="relative w-full max-w-[360px] sm:max-w-[420px] rounded-2xl overflow-hidden shadow-2xl">
         
         {/* Imagen de fondo */}
         <img

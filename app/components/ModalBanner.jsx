@@ -1,6 +1,8 @@
 'use client'
 
-import { useState } from 'react';
+import { useState } from 'react'
+import Link from 'next/link'
+
 
 export default function ModalBanner() {
 
@@ -43,9 +45,12 @@ export default function ModalBanner() {
             Aprovecha los descuentos especiales
           </p>
 
-          <button className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
-            Ver Ofertas
-          </button>
+          <Link href={"/clientes"}>
+            <button className="mt-4 bg-yellow-400 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-300 transition">
+              Ver Ofertas
+            </button>
+          </Link>
+
           
         </div>
       </div>

@@ -2,6 +2,7 @@ import { CiWarning } from "react-icons/ci";
 import { GrDocumentTime } from "react-icons/gr";
 import { IoDocumentsOutline, IoCalendarNumberOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai"; 
+import Link from 'next/link'
 
 export default function Benefits() {
   const benefits = [
@@ -70,9 +71,12 @@ export default function Benefits() {
         <h2 className="text-white font-bold py-5 text-[32px] md:text-[40px] leading-tight drop-shadow">
           Únete a la fase beta
         </h2>
-        <button className="bg-[#F9C623] text-[#0A1A33] px-10 py-4 rounded-lg font-semibold text-xl hover:bg-yellow-400 transition">
-          Contratar ahora
-        </button>
+        <Link href="/clientes">
+          <button className="bg-[#F9C623] text-[#0A1A33] px-10 py-4 rounded-lg font-semibold text-xl hover:bg-yellow-400 transition">
+            Contratar ahora
+          </button>
+        </Link>
+        
       </section>
 
       {/* Footer */}
@@ -83,6 +87,7 @@ export default function Benefits() {
           className="w-36"
         />
       </footer>
+      
     </div>
   );
 }

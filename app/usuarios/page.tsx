@@ -1,4 +1,5 @@
 import { AiOutlineClockCircle } from 'react-icons/ai'
+import Link from 'next/link'
 
 export default async function UserPage() {
   return (
@@ -18,9 +19,11 @@ export default async function UserPage() {
             <p className="text-white text-[20px] md:text-[22px] font-medium drop-shadow">
               en nuestra plataforma posventa
             </p>
-            <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
-              Obtener el 35% off
-            </button>
+            <Link href={'/usuarios'}>
+              <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
+                Obtener el 35% off
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -45,9 +48,11 @@ export default async function UserPage() {
           </div>
 
           <div className="flex justify-center md:justify-end">
-            <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
-              Ver demo
-            </button>
+            <Link href={'/usuarios'}>
+              <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
+                Ver demo
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -137,9 +142,11 @@ export default async function UserPage() {
         <h2 className="text-white font-bold py-5 text-[32px] md:text-[40px] leading-tight drop-shadow">
           Únete a la fase beta
         </h2>
-        <button className="bg-[#F9C623] text-[#0A1A33] px-10 py-4 rounded-lg font-semibold text-xl hover:bg-yellow-400 transition">
-          Contratar ahora
-        </button>
+        <Link href={'/usuarios'}>
+          <button className="bg-[#F9C623] text-[#0A1A33] px-10 py-4 rounded-lg font-semibold text-xl hover:bg-yellow-400 transition">
+            Contratar ahora
+          </button>
+        </Link>
       </section>
 
       {/* 🔵 SECCIÓN DE INFORMACIÓN */}
@@ -174,6 +181,11 @@ export default async function UserPage() {
             Vivamus et libero sit amet eros tincidunt posuere vel et neque.
           </p>
         </div>
+        <Link href={'/'}>
+          <button className="bg-[#F9C623] text-[#0A1A33] px-10 py-4 rounded-lg font-semibold text-xl hover:bg-yellow-400 transition">
+            IR AL INICIO
+          </button>
+        </Link>
       </section>
     </>
   )

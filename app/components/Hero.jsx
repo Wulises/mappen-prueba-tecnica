@@ -1,9 +1,12 @@
+import Link from 'next/link'
+
 export default function Hero() {
   return (
     <section className="w-full">
 
       {/* 🔴 BANNER ROJO */}
       <div className="w-full relative">
+
         <img
           src="/images/llego_el_balck_friday2.jpg"
           alt="Black Friday 35%"
@@ -19,9 +22,12 @@ export default function Hero() {
             en nuestra plataforma posventa
           </p>
 
+        <Link href="/clientes">
           <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
             Obtener el 35% off
           </button>
+        </Link>
+     
         </div>
       </div>
 
@@ -47,9 +53,12 @@ export default function Hero() {
             </ul>
 
             {/* Botón dentro de la misma columna */}
-            <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
-              Ver demo
-            </button>
+            <Link href={"/clientes"}>
+              <button className="mt-8 bg-[#F9C623] text-[#0A1A33] px-7 py-3 rounded-lg font-semibold text-[18px] hover:bg-[#fbd54d] transition">
+                Ver demo
+              </button>
+            </Link>
+
           </div>
 
           {/* Imagen derecha */}

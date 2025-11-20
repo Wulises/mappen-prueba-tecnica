@@ -1,13 +1,37 @@
-import { FaWhatsapp } from 'react-icons/fa'
 import { AiOutlineClockCircle } from 'react-icons/ai'
-async function fetchPlans() {
+
+import { FaWhatsapp } from 'react-icons/fa'
+
+interface Plan {
+  id: string
+  slug: string
+  nombre: string
+  duracionMeses: number
+  descripcionCorta: string
+  ahorroPorcentaje: number
+  boton: {
+    texto: string
+    url: string
+  }
+  categorias: string[]
+  destacado: boolean
+  activo: boolean
+  orden: number
+}
+
+interface PlanData {
+  plans: Plan[]
+}
+
+async function fetchPlans(): Promise<Plan[]> {
   const res = await fetch(
     'https://proyectoshm.com/pruebas-hm/mensualidades.json',
     {
       cache: 'no-store',
     }
   )
-  const data = await res.json()
+
+  const data: PlanData = await res.json()
   return data.plans.filter(
     (plan) => plan.id === '12-meses' || plan.id === '24-meses'
   ) // Solo los planes de 12 y 24 meses
@@ -122,7 +146,8 @@ export default async function ClientPage() {
           </div>
         </div>
       </section>
-      {/* Call to Action */}
+
+      {/* 🔵 CALL TO ACTION */}
       <section className="bg-[#0A1A33] py-16 px-6 text-center">
         {/* Black Friday Offer Banner */}
         <section className="bg-[#F9C623] py-3 rounded-full max-w-fit mx-auto mb-6">
@@ -139,6 +164,8 @@ export default async function ClientPage() {
           Contratar ahora
         </button>
       </section>
+
+      {/* 🔵 SECCIÓN DE INFORMACIÓN */}
       <section className="bg-[#F8F8F8] text-[#333333] py-16 px-6">
         <div className="max-w-[1200px] mx-auto">
           <p className="text-lg md:text-xl mb-6">

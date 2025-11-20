@@ -1,7 +1,7 @@
 import { CiWarning } from "react-icons/ci";
 import { GrDocumentTime } from "react-icons/gr";
 import { IoDocumentsOutline, IoCalendarNumberOutline } from "react-icons/io5";
-import { AiOutlineClockCircle } from "react-icons/ai"; // For the clock icon in the banner
+import { AiOutlineClockCircle } from "react-icons/ai"; 
 
 export default function Benefits() {
   const benefits = [
